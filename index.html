@@ -15,28 +15,24 @@
             --text-muted: #94a3b8;
             --accent: #06b6d4;
         }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
         }
-
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
             line-height: 1.6;
         }
-
         /* Header / Hero Section */
         header {
             padding: 4rem 2rem;
             text-align: center;
-            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+            background: radial-gradient(circle at top, #1e40af 0%, transparent 100%);
             border-bottom: 1px solid #334155;
         }
-
         h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -44,167 +40,158 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
         .subtitle {
             font-size: 1.25rem;
             color: var(--text-muted);
             max-width: 600px;
             margin: 0 auto 2rem;
         }
-
         .social-links a {
             color: var(--text-main);
             font-size: 1.5rem;
             margin: 0 10px;
             transition: color 0.3s;
         }
-
         .social-links a:hover {
             color: var(--primary);
         }
-
         /* Projects Section */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 4rem 2rem;
         }
-
         .section-title {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 3rem;
             text-align: center;
-            border-left: 5px solid var(--primary);
-            padding-left: 15px;
-            display: inline-block;
         }
-
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
-
         .project-card {
             background-color: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
-            border: 1px solid #334155;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
             transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
         }
-
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border-color: var(--primary);
+            box-shadow: 0 12px 24px rgba(59, 130, 246, 0.2);
         }
-
         .card-content {
             padding: 2rem;
-            flex-grow: 1;
+            flex: 1;
         }
-
         .project-type {
-            text-transform: uppercase;
-            font-size: 0.75rem;
-            letter-spacing: 1px;
             color: var(--accent);
-            font-weight: bold;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 0.5rem;
         }
-
-        .card-content h3 {
+        .project-card h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
+            color: var(--text-main);
         }
-
-        .card-content p {
+        .project-card p {
             color: var(--text-muted);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
+            margin-bottom: 1rem;
         }
-
         .tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin-top: auto;
-            padding-top: 1rem;
-            border-top: 1px solid #334155;
+            margin-top: 1.5rem;
         }
-
         .tech-tag {
-            background-color: rgba(59, 130, 246, 0.1);
-            color: var(--primary);
-            padding: 4px 10px;
+            background: #334155;
+            color: var(--text-main);
+            padding: 0.4rem 0.8rem;
             border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
+            font-size: 0.75rem;
+            font-weight: 500;
         }
-
         .card-actions {
             padding: 1.5rem 2rem;
-            background-color: rgba(0,0,0,0.2);
+            border-top: 1px solid #334155;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: 1rem;
+            background: rgba(15, 23, 42, 0.5);
         }
-
         .btn {
+            flex: 1;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
             text-decoration: none;
-            color: var(--text-main);
-            font-weight: 500;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            transition: background 0.3s;
             display: flex;
             align-items: center;
-            gap: 5px;
-            transition: color 0.3s;
+            justify-content: center;
+            gap: 0.5rem;
         }
-
         .btn:hover {
-            color: var(--primary);
+            background: #2563eb;
         }
-
+        .btn-secondary {
+            background: #10b981;
+        }
+        .btn-secondary:hover {
+            background: #059669;
+        }
         /* Contact Section */
         .contact {
-            text-align: center;
+            background: var(--card-bg);
             padding: 4rem 2rem;
-            background-color: #1e293b;
-            margin-top: 4rem;
+            text-align: center;
+            border-top: 1px solid #334155;
         }
-
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
         .contact p {
-            margin-bottom: 1.5rem;
             color: var(--text-muted);
+            margin-bottom: 1.5rem;
         }
-
         .email-btn {
             display: inline-block;
-            background-color: var(--primary);
+            padding: 1rem 2rem;
+            background: var(--primary);
             color: white;
-            padding: 12px 30px;
-            border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
+            border-radius: 8px;
+            font-weight: 600;
             transition: background 0.3s;
         }
-
         .email-btn:hover {
-            background-color: #2563eb;
+            background: #2563eb;
         }
-
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .projects-grid { grid-template-columns: 1fr; }
+            h1 {
+                font-size: 2rem;
+            }
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>AI & Software Developer</h1>
-        <p class="subtitle">Buduję skalowalne systemy backendowe, wdrażam rozwiązania AI i tworzę nowoczesne aplikacje mobilne.</p>
+        <h1>Amadeusz Więczorek</h1>
+        <p class="subtitle">Tworzę rozwiązania AI i tworzę nowoczesne aplikacje mobilne.</p>
         <p class="subtitle" style="font-size: 1rem; margin-top: 1.5rem; color: #94a3b8; max-width: 700px; margin-left: auto; margin-right: auto;">
             Często tworzę projekty z ciekawości lub do rozwiązywania moich prywatnych problemów. Przedstawione poniżej aplikacje to pierwsze działające prototypy. <br><br>
             Jeśli jednak masz pomysł na swoją automatyzację — opisz mi ją, a ja postaram się ją wycenić.
@@ -217,7 +204,6 @@
 
     <main class="container">
         <center><h2 class="section-title">Wybrane Projekty</h2></center>
-
         <div class="projects-grid">
             
             <!-- PROJEKT 1: OLX AI AUTOMATION -->
@@ -295,6 +281,34 @@
                 </div>
             </article>
 
+            <!-- PROJEKT 4: APLIKACJA POGODA -->
+            <article class="project-card">
+                <div class="card-content">
+                    <div class="project-type">Android Mobile App</div>
+                    <h3>Aplikacja Pogodowa (Android)</h3>
+                    <p>
+                        Natywna aplikacja mobilna na Androida dostarczająca aktualne informacje pogodowe. Aplikacja wykorzystuje API OpenWeatherMap do pobierania danych meteorologicznych w czasie rzeczywistym.
+                    </p>
+                    <p>
+                        Intuicyjny interfejs użytkownika prezentuje bieżącą temperaturę, wilgotność, ciśnienie oraz prognozę pogody. Aplikacja została zbudowana z wykorzystaniem nowoczesnych technologii Android Development.
+                    </p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Android SDK</span>
+                        <span class="tech-tag">OpenWeatherMap API</span>
+                        <span class="tech-tag">Retrofit</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/amikamik/android-weather-app" target="_blank" class="btn">
+                        <i class="fab fa-github"></i> Kod źródłowy
+                    </a>
+                    <a href="app-debug.apk" download class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Pobierz APK
+                    </a>
+                </div>
+            </article>
+
         </div>
     </main>
 
@@ -303,6 +317,5 @@
         <p>Napisz do mnie:</p>
         <a href="mailto:amadeuszwieczorek@gmail.com" class="email-btn">amadeuszwieczorek@gmail.com</a>
     </section>
-
 </body>
 </html>
